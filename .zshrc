@@ -15,7 +15,8 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 export GOPATH="$HOME/go:$HOME/Projects/golang"
-export PATH=$PATH:$GOPATH/bin
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk11/Contents/Home
+export PATH=$PATH:$GOPATH/bin:$JAVA_HOME/bin
 
 if type rg &> /dev/null; then
 	export FZF_DEFAULT_COMMAND='rg --files'
@@ -23,7 +24,7 @@ if type rg &> /dev/null; then
 fi
 
 alias c="clear"
-alias m= "mkdir"
+alias m="mkdir"
 alias x="exit"
 alias ..="cd .."
 alias ...="cd ../.."
@@ -33,6 +34,7 @@ alias ....="cd ../../.."
 alias ls="exa -al"
 alias la="exa -abghHliS"
 alias lt="exa --long --tree"
+alias lta="lt -a"
 
 #vim
 alias v="vim"
@@ -67,6 +69,7 @@ alias dbt="d build -t"
 alias dcu="d compose up"
 alias dcud="dcu -d"
 alias dcub="dcu --build"
+alias dcd="d compose down"
 alias dpsa="d ps -a"
 alias dc="d container"
 alias dcst="dc start"
@@ -90,6 +93,7 @@ alias dpe='dr -it --rm -v "$(pwd):/docker" -v /var/run/docker.sock:/var/run/dock
 alias g="git"
 alias gi="g init"
 alias gcfg="g config"
+alias gf="g fetch"
 alias gp="g push"
 alias gpo="gp origin"
 alias gpom="gpo master"
@@ -112,6 +116,7 @@ alias gcl="g clone"
 alias gbr="g branch"
 alias gcm="g commit -m"
 alias gcam="g commit -am"
+alias gdf="g diff"
 alias glg="g log"
 alias glgo="glg --oneline"
 
@@ -119,6 +124,9 @@ alias glgo="glg --oneline"
 alias p="cd ~/Projects"
 alias pw="cd ~/Projects/work"
 alias pp="cd ~/Projects/personal"
+
+alias sz="source ~/.zshrc"
+alias sv="source ~/.vimrc"
 
 export EDITOR="v"
 

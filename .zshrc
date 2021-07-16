@@ -16,6 +16,14 @@ source $ZSH/oh-my-zsh.sh
 
 export GOPATH="$HOME/go:$HOME/Projects/golang"
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk11/Contents/Home
+
+path=(
+	  /opt/local/{bin,sbin}
+    /usr/local/{bin,sbin}
+    $HOME/bin
+    $path
+)
+
 export PATH=$PATH:$GOPATH/bin:$JAVA_HOME/bin
 
 if type rg &> /dev/null; then
@@ -23,9 +31,24 @@ if type rg &> /dev/null; then
 	export FZF_DEFAULT_OPTS='-m --height 50% --border'
 fi
 
+export CLICOLOR=1
+
+alias s="sudo"
 alias c="clear"
+alias e="echo"
+alias k="kill"
+alias pk="pkill"
+alias l="less"
 alias m="mkdir"
+alias mp="m -p"
+alias mk="make"
+alias r="rmdir"
 alias x="exit"
+alias y="yank"
+
+alias P="ping"
+alias tr="traceroute"
+
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -36,12 +59,14 @@ alias la="exa -abghHliS"
 alias lt="exa --long --tree"
 alias lta="lt -a"
 
-#vim
-alias v="vim"
+alias spi="s port install"
+
+#neovim
+alias v="nvim"
 alias vv="v --version"
 alias vc="v ."
 alias vz="v ~/.zshrc"
-alias vr="v ~/.vimrc"
+alias vn="v ~/.config/nvim/init.vim"
 alias vt="v ~/.tmux.conf"
 alias va="v ~/.config/alacritty/alacritty.yml"
 
@@ -116,6 +141,10 @@ alias gcl="g clone"
 alias gbr="g branch"
 alias gcm="g commit -m"
 alias gcam="g commit -am"
+alias gsh="g stash"
+alias gsp="g stash pop"
+alias gsl="g stash list"
+alias gsa="g stash apply"
 alias gdf="g diff"
 alias glg="g log"
 alias glgo="glg --oneline"

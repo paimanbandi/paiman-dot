@@ -1,5 +1,5 @@
 " vim-plug
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'gruvbox-community/gruvbox'
 Plug 'vim-airline/vim-airline'
@@ -40,13 +40,15 @@ set nowritebackup
 set noswapfile
 set tabstop=2 softtabstop=2 shiftwidth=2
 set foldmethod=syntax
+set termguicolors
 
-filetype plugin on
+filetype plugin indent on
+
 syntax on
 colorscheme gruvbox
 
 " nerdtree
-autocmd BufWinEnter * NERDTreeFind
+"autocmd BufWinEnter * NERDTreeFind
 
 let NERDTreeQuitOnOpen = 1
 let NERDTreeAutoDeleteBuffer = 1
@@ -67,7 +69,6 @@ autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 
 " coc
-nnoremap <silent> K :call CocAction('doHover')<CR>
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)

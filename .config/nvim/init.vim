@@ -48,7 +48,7 @@ syntax on
 colorscheme gruvbox
 
 " nerdtree
-"autocmd BufWinEnter * NERDTreeFind
+autocmd BufWinEnter * NERDTreeFind
 
 let NERDTreeQuitOnOpen = 1
 let NERDTreeAutoDeleteBuffer = 1

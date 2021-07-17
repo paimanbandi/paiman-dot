@@ -22,6 +22,11 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 
 ```zsh
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
+```
+
+
+```zsh
 curl -o ~/.ohmyzsh/theme/lambda-mod.zsh-theme
  https://github.com/halfo/lambda-mod-zsh-theme/blob/master/lambda-mod.zsh-theme
 ```
@@ -49,6 +54,22 @@ sudo port install exa
 ```zsh
 sudo port install yank
 ```
+
+
+
+### Fzf
+```zsh
+sudo port install fzf
+```
+
+
+
+### Rg
+```zsh
+sudo port install ripgrep
+```
+
+
 
 ### Neovim 
 

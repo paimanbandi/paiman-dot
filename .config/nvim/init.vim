@@ -27,6 +27,10 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 
+Plug 'ryanoasis/vim-devicons'
+
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+
 call plug#end()
 
 set background=dark
@@ -42,9 +46,11 @@ set tabstop=2 softtabstop=2 shiftwidth=2
 set foldmethod=syntax
 set termguicolors
 
+syntax sync fromstart
+syntax on
+
 filetype plugin indent on
 
-syntax on
 colorscheme gruvbox
 
 " nerdtree
@@ -61,8 +67,9 @@ let g:NERDTreeHighlightFolders = 1
 let g:NERDTreeHighlightFoldersFullName = 1
 
 " fzf & rg
-nnoremap <silent> <C-f> :Files<CR>
-nnoremap <silent> <C-r> :Rg<CR>
+silent! nmap <C-f> :Files<CR>
+silent! nmap <C-g> :GFiles<CR>
+silent! nmap <C-r> :Rg!
 
 " js family
 autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
@@ -73,6 +80,12 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+
+nmap <silent> K :call CocAction('doHover')<CR>
+
+let g:coc_global_extensions = [
+  \ 'coc-tsserver'
+  \ ]
 
 "autoformat
 au BufWrite * :Autoformat
@@ -119,3 +132,8 @@ if &term =~ "screen"
 	exec "set t_PE=\e[201~"
 endif
 
+" conf highlight
+au BufEnter,BufRead *conf* setf dosini
+
+" hexokinase
+let g:Hexokinase_highlighters = [ 'virtual' ]

@@ -17,6 +17,7 @@ source $ZSH/oh-my-zsh.sh
 export GOPATH="$HOME/go:$HOME/Projects/golang"
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk11/Contents/Home
 
+#path
 path=(
 	  /opt/local/{bin,sbin}
     /usr/local/{bin,sbin}
@@ -33,6 +34,7 @@ fi
 
 export CLICOLOR=1
 
+alias a="alias"
 alias s="sudo"
 alias c="clear"
 alias e="echo"
@@ -49,9 +51,12 @@ alias y="yank"
 alias P="ping"
 alias tr="traceroute"
 
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
+#bat
+alias b="bat"
+alias ba="b -A"
+alias bl="b -l"
+alias bn="b -n"
+alias bt="b --paging=never -l log"
 
 #exa
 alias ls="exa -al"
@@ -150,9 +155,9 @@ alias glg="g log"
 alias glgo="glg --oneline"
 
 #projects
-alias p="cd ~/Projects"
-alias pw="cd ~/Projects/work"
-alias pp="cd ~/Projects/personal"
+alias p="~/Projects"
+alias pw="~/Projects/work"
+alias pp="~/Projects/personal"
 
 alias sz="source ~/.zshrc"
 alias sv="source ~/.vimrc"

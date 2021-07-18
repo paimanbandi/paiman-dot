@@ -23,6 +23,7 @@ Plug 'ekalinin/Dockerfile.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'Chiel92/vim-autoformat'
 Plug 'jiangmiao/auto-pairs'
+Plug 'vim-syntastic/syntastic'
 
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
@@ -33,10 +34,14 @@ Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
 call plug#end()
 
+colorscheme gruvbox
+
+" vim colorscheme in tmux
 set background=dark
 set t_Co=256
+
 set hidden
-set number
+set nu
 set ruler
 set mouse=a
 set nobackup
@@ -44,17 +49,14 @@ set nowritebackup
 set noswapfile
 set tabstop=2 softtabstop=2 shiftwidth=2
 set foldmethod=syntax
-set termguicolors
 
 syntax sync fromstart
 syntax on
 
 filetype plugin indent on
 
-colorscheme gruvbox
-
 " nerdtree
-autocmd BufWinEnter * NERDTreeFind
+au BufWinEnter * NERDTreeFind
 
 let NERDTreeQuitOnOpen = 1
 let NERDTreeAutoDeleteBuffer = 1
@@ -72,8 +74,8 @@ silent! nmap <C-g> :GFiles<CR>
 silent! nmap <C-r> :Rg!
 
 " js family
-autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
-autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
+au BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+au BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 
 " coc
 nmap <silent> gd <Plug>(coc-definition)
@@ -87,11 +89,21 @@ let g:coc_global_extensions = [
   \ 'coc-tsserver'
   \ ]
 
-"autoformat
+" autoformat
 au BufWrite * :Autoformat
 let g:autoformat_autoindent = 0
 let g:autoformat_retab = 0
 let g:autoformat_remove_trailing_spaces = 0
+
+" syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " vim-airline
 let g:airline_theme='gruvbox'

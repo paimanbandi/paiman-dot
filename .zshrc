@@ -35,7 +35,6 @@ fi
 export CLICOLOR=1
 
 alias a="alias"
-alias s="sudo"
 alias c="clear"
 alias e="echo"
 alias k="kill"
@@ -43,13 +42,19 @@ alias pk="pkill"
 alias l="less"
 alias m="mkdir"
 alias mp="m -p"
-alias mk="make"
-alias r="rmdir"
 alias x="exit"
-alias y="yank"
 
 alias P="ping"
 alias tr="traceroute"
+
+#sudo
+alias s="sudo"
+alias sv="s v"
+alias spi="s port install"
+
+#yank
+alias y="yank"
+alias yl="y -l"
 
 #bat
 alias b="bat"
@@ -63,8 +68,6 @@ alias ls="exa -al"
 alias la="exa -abghHliS"
 alias lt="exa --long --tree"
 alias lta="lt -a"
-
-alias spi="s port install"
 
 #neovim
 alias v="nvim"

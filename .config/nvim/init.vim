@@ -26,7 +26,8 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'vim-syntastic/syntastic'
 
 Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
+"Plug 'plasticboy/vim-markdown'
+Plug 'npxbr/glow.nvim', {'do': ':GlowInstall', 'branch': 'main'}
 
 Plug 'ryanoasis/vim-devicons'
 
@@ -149,3 +150,6 @@ au BufEnter,BufRead *conf* setf dosini
 
 " hexokinase
 let g:Hexokinase_highlighters = [ 'virtual' ]
+
+" glow
+nmap <leader>g :Glow<CR>

@@ -56,12 +56,10 @@ sudo port install yank
 ```
 
 
-
 ### Fzf
 ```zsh
 sudo port install fzf
 ```
-
 
 
 ### Rg
@@ -69,6 +67,11 @@ sudo port install fzf
 sudo port install ripgrep
 ```
 
+
+### Glow
+```zsh
+sudo port install glow
+```
 
 
 ### Neovim 

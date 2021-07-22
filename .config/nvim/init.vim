@@ -26,7 +26,6 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'vim-syntastic/syntastic'
 
 Plug 'godlygeek/tabular'
-"Plug 'plasticboy/vim-markdown'
 Plug 'npxbr/glow.nvim', {'do': ':GlowInstall', 'branch': 'main'}
 
 Plug 'ryanoasis/vim-devicons'
@@ -50,6 +49,7 @@ set nowritebackup
 set noswapfile
 set tabstop=2 softtabstop=2 shiftwidth=2
 set foldmethod=syntax
+set autowrite
 
 syntax sync fromstart
 syntax on
@@ -69,6 +69,9 @@ let g:NERDTreeStatusline = ''
 let g:NERDTreeHighlightFolders = 1
 let g:NERDTreeHighlightFoldersFullName = 1
 
+nmap <leader>t :NERDTreeToggle<CR>
+nmap <leader>r :NERDTreeFocus<cr>R<c-w><c-p>
+
 " fzf & rg
 silent! nmap <C-f> :Files<CR>
 silent! nmap <C-g> :GFiles<CR>
@@ -87,7 +90,8 @@ nmap <silent> gr <Plug>(coc-references)
 nmap <silent> K :call CocAction('doHover')<CR>
 
 let g:coc_global_extensions = [
-  \ 'coc-tsserver'
+  \ 'coc-tsserver',
+  \ 'coc-go'
   \ ]
 
 " autoformat
@@ -153,3 +157,18 @@ let g:Hexokinase_highlighters = [ 'virtual' ]
 
 " glow
 nmap <leader>g :Glow<CR>
+
+" vim-go
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_operators = 1
+let g:go_fmt_command = "goimports"
+
+" python
+let g:pymode_python = 'python3'
+
+" yaml/yml
+au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml foldmethod=indent
+au FileType yaml setlocal ts=2 sts=2 sw=2 expandtab

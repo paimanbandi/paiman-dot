@@ -14,8 +14,11 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-export GOPATH="$HOME/go:$HOME/Projects/golang"
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk11/Contents/Home
+export GOPATH="$HOME/Projects/golang:$HOME/go"
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_291.jdk/Contents/Home
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
+export FLUTTER_HOME=/Applications/flutter
 
 #path
 path=(
@@ -25,7 +28,7 @@ path=(
     $path
 )
 
-export PATH=$PATH:$GOPATH/bin:$JAVA_HOME/bin
+export PATH=$PATH:$(yarn global bin):$GOPATH/bin:$JAVA_HOME/bin:$FLUTTER_HOME/bin:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
 
 if type rg &> /dev/null; then
 	export FZF_DEFAULT_COMMAND='rg --files'
@@ -102,6 +105,7 @@ alias dbt="d build -t"
 alias dcu="d compose up"
 alias dcud="dcu -d"
 alias dcub="dcu --build"
+alias dcubd="dcub -d"
 alias dcd="d compose down"
 alias dpsa="d ps -a"
 alias dc="d container"
@@ -157,15 +161,27 @@ alias gdf="g diff"
 alias glg="g log"
 alias glgo="glg --oneline"
 
+#flutter
+alias f="flutter"
+alias fv="f --version"
+alias fd="f doctor"
+alias fr="f run"
+alias fpg="f pub get"
+
+#npm
+alias n="npm"
+alias ns="npm start"
+alias nrt="npm run test"
+
 #projects
-alias p="~/Projects"
-alias pw="~/Projects/work"
-alias pp="~/Projects/personal"
+alias p="cd ~/Projects"
+alias pw="cd ~/Projects/work"
+alias pp="cd ~/Projects/personal"
 
 alias sz="source ~/.zshrc"
 alias sv="source ~/.vimrc"
 
+alias w="wtfutil"
+
 export EDITOR="v"
-
-
 

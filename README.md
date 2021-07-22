@@ -73,6 +73,11 @@ sudo port install ripgrep
 sudo port install glow
 ```
 
+### Wtfutil
+```
+sudo port install wtfutil
+```
+
 
 ### Neovim 
 

@@ -4,6 +4,11 @@ My set of zsh, alacritty, tmux, and neovim configuration files.
 
 ## ⚡️ Installation
 
+### Fira Code Nerd Font
+
+```zsh
+cd ~/Library/Fonts && { curl -O 'https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/FiraCode/Regular/complete/Fira%20Code%20Regular%20Nerd%20Font%20Complete%20Mono%20Windows%20Compatible.ttf' ; cd -; }
+```
 
 ### Oh My Zsh
 
@@ -63,6 +68,19 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ```
 
+### MySQL & PostgreSQL
+
+```zsh
+brew install mysql-client
+```
+
+
+```zsh
+brew install libpq  
+
+brew link --force libpq
+```
+
 
 ### Other tools
 
@@ -91,12 +109,12 @@ sudo port install glow
 ```
 
 
-```
+```zsh
 sudo port install wtfutil
 ```
 
 
-```
+```zsh
 sudo port install lazydocker
 ```
 

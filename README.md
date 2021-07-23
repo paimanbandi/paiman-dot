@@ -33,49 +33,16 @@ curl -o ~/.ohmyzsh/theme/lambda-mod.zsh-theme
 
 
 ### Alacritty
+
 ```zsh
 sudo port install alacritty
 ```
 
 
 ### Tmux
+
 ```zsh
 sudo port install tmux
-```
-
-
-### Exa
-```zsh
-sudo port install exa
-```
-
-
-### Yank
-```zsh
-sudo port install yank
-```
-
-
-### Fzf
-```zsh
-sudo port install fzf
-```
-
-
-### Rg
-```zsh
-sudo port install ripgrep
-```
-
-
-### Glow
-```zsh
-sudo port install glow
-```
-
-### Wtfutil
-```
-sudo port install wtfutil
 ```
 
 
@@ -91,11 +58,45 @@ ln -s /Applications/nvim-osx64/bin/nvim /usr/local/bin/nvim
 ```
 
 
-### Vim Plug
-
 ```zsh
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ```
 
+
+### Other tools
+
+```zsh
+sudo port install exa
+```
+
+
+```zsh
+sudo port install yank
+```
+
+
+```zsh
+sudo port install fzf
+```
+
+
+```zsh
+sudo port install ripgrep
+```
+
+
+```zsh
+sudo port install glow
+```
+
+
+```
+sudo port install wtfutil
+```
+
+
+```
+sudo port install lazydocker
+```
 

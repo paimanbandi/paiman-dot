@@ -7,7 +7,7 @@ My set of zsh, alacritty, tmux, and neovim configuration files.
 ### Fira Code Nerd Font
 
 ```zsh
-cd ~/Library/Fonts && { curl -O 'https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/FiraCode/Regular/complete/Fira%20Code%20Regular%20Nerd%20Font%20Complete%20Mono%20Windows%20Compatible.ttf' ; cd -; }
+cd ~/Library/Fonts && { wget https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/FiraCode/Regular/complete/Fira%20Code%20Regular%20Nerd%20Font%20Complete%20Mono%20Windows%20Compatible.ttf ; cd -; }
 ```
 
 ### Oh My Zsh
@@ -32,8 +32,7 @@ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zs
 
 
 ```zsh
-curl -o ~/.ohmyzsh/theme/lambda-mod.zsh-theme
- https://github.com/halfo/lambda-mod-zsh-theme/blob/master/lambda-mod.zsh-theme
+cd ~/.ohmyzsh/theme && { wget https://github.com/halfo/lambda-mod-zsh-theme/blob/master/lambda-mod.zsh-theme ; cd -; }
 ```
 
 
@@ -54,7 +53,7 @@ sudo port install tmux
 ### Neovim 
 
 ```zsh
-curl -o /Applications/nvim-macos.tar.gz https://github.com/neovim/neovim/releases/download/v0.5.0/nvim-macos.tar.gz
+cd /Applications && { wget https://github.com/neovim/neovim/releases/download/v0.5.0/nvim-macos.tar.gz ; cd -; }
 
 tar xzvf /Applications/nvim-macos.tar.gz
 
@@ -68,7 +67,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ```
 
-### MySQL & PostgreSQL
+### MySQL & PostgreSQL Client
 
 ```zsh
 brew install mysql-client

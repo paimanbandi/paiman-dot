@@ -10,6 +10,17 @@ My set of zsh, alacritty, tmux, and neovim configuration files.
 cd ~/Library/Fonts && { wget https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/FiraCode/Regular/complete/Fira%20Code%20Regular%20Nerd%20Font%20Complete%20Mono%20Windows%20Compatible.ttf ; cd -; }
 ```
 
+### NodeJS
+
+```zsh
+sudo port install nodejs14
+```
+
+
+```zsh
+npm install --global yarn
+```
+
 ### Oh My Zsh
 
 ```zsh

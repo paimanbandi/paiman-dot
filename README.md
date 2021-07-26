@@ -32,7 +32,7 @@ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zs
 
 
 ```zsh
-cd ~/.oh-my-zsh/theme && { wget https://github.com/halfo/lambda-mod-zsh-theme/blob/master/lambda-mod.zsh-theme ; cd -; }
+cd ~/.oh-my-zsh/themes && { wget https://github.com/halfo/lambda-mod-zsh-theme/blob/master/lambda-mod.zsh-theme ; cd -; }
 ```
 
 
@@ -99,6 +99,11 @@ sudo port install fzf
 
 
 ```zsh
+sudo port install fd
+```
+
+
+```zsh
 sudo port install ripgrep
 ```
 
@@ -115,5 +120,10 @@ sudo port install wtfutil
 
 ```zsh
 sudo port install lazydocker
+```
+
+
+```zsh
+sudo port install httpie
 ```
 

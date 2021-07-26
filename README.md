@@ -23,7 +23,7 @@ sudo port install npm7
 
 
 ```zsh
-npm install --global yarn
+sudo npm install --global yarn
 ```
 
 ### Oh My Zsh
@@ -48,7 +48,7 @@ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zs
 
 
 ```zsh
-cd ~/.oh-my-zsh/themes && { wget https://github.com/halfo/lambda-mod-zsh-theme/blob/master/lambda-mod.zsh-theme ; cd -; }
+cd ~/.oh-my-zsh/themes && { wget https://raw.githubusercontent.com/halfo/lambda-mod-zsh-theme/master/lambda-mod.zsh-theme ; cd -; }
 ```
 
 

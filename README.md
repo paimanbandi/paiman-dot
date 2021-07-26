@@ -26,6 +26,12 @@ sudo port install npm7
 sudo npm install --global yarn
 ```
 
+### Golang
+
+```zsh
+sudo port install go
+```
+
 ### Oh My Zsh
 
 ```zsh

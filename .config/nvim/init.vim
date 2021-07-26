@@ -96,7 +96,9 @@ nmap <silent> K :call CocAction('doHover')<CR>
 let g:coc_global_extensions = [
   \ 'coc-tsserver',
   \ 'coc-go',
-  \ 'coc-json'
+  \ 'coc-json',
+	\ 'coc-prettier',
+	\ 'coc-eslint'
   \ ]
 
 " autoformat

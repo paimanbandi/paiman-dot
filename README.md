@@ -18,6 +18,11 @@ sudo port install nodejs14
 
 
 ```zsh
+sudo port install npm7
+```
+
+
+```zsh
 npm install --global yarn
 ```
 

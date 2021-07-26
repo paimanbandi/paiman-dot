@@ -12,10 +12,9 @@ Plug 'preservim/nerdcommenter'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'maxmellon/vim-jsx-pretty'
 Plug 'pangloss/vim-javascript'
-Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'ekalinin/Dockerfile.vim'
@@ -31,6 +30,11 @@ Plug 'npxbr/glow.nvim', {'do': ':GlowInstall', 'branch': 'main'}
 Plug 'ryanoasis/vim-devicons'
 
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'mlaursen/vim-react-snippets'
+
 
 call plug#end()
 
@@ -91,7 +95,8 @@ nmap <silent> K :call CocAction('doHover')<CR>
 
 let g:coc_global_extensions = [
   \ 'coc-tsserver',
-  \ 'coc-go'
+  \ 'coc-go',
+  \ 'coc-json'
   \ ]
 
 " autoformat
@@ -172,3 +177,15 @@ let g:pymode_python = 'python3'
 " yaml/yml
 au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml foldmethod=indent
 au FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+" ultisnips
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsListSnippets = "<c-tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsSnippetDirectories=["UltiSnips", $HOME.'/.config/nvim/']
+
+" tsconfig
+let g:syntastic_typescript_tsc_fname = ''
+

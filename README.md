@@ -32,7 +32,7 @@ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zs
 
 
 ```zsh
-cd ~/.ohmyzsh/theme && { wget https://github.com/halfo/lambda-mod-zsh-theme/blob/master/lambda-mod.zsh-theme ; cd -; }
+cd ~/.oh-my-zsh/theme && { wget https://github.com/halfo/lambda-mod-zsh-theme/blob/master/lambda-mod.zsh-theme ; cd -; }
 ```
 
 

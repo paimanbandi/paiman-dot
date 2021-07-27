@@ -8,6 +8,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'preservim/nerdtree'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'preservim/nerdcommenter'
+Plug 'ryanoasis/vim-devicons'
 
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -20,21 +21,16 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'ekalinin/Dockerfile.vim'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'Chiel92/vim-autoformat'
 Plug 'jiangmiao/auto-pairs'
 Plug 'vim-syntastic/syntastic'
 
 Plug 'godlygeek/tabular'
 Plug 'npxbr/glow.nvim', {'do': ':GlowInstall', 'branch': 'main'}
 
-Plug 'ryanoasis/vim-devicons'
-
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
 Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
 Plug 'mlaursen/vim-react-snippets'
-
 
 call plug#end()
 
@@ -52,6 +48,7 @@ set nobackup
 set nowritebackup
 set noswapfile
 set tabstop=2 softtabstop=2 shiftwidth=2
+set expandtab
 set foldmethod=syntax
 set autowrite
 
@@ -63,7 +60,6 @@ filetype plugin indent on
 " nerdtree
 au BufWinEnter * NERDTreeFind
 
-let NERDTreeQuitOnOpen = 1
 let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeDirArrows = 1
 let g:NERDTreeShowHidden = 1
@@ -98,14 +94,9 @@ let g:coc_global_extensions = [
   \ 'coc-go',
   \ 'coc-json',
 	\ 'coc-prettier',
-	\ 'coc-eslint'
+	\ 'coc-eslint',
+	\ 'coc-tslint-plugin'
   \ ]
-
-" autoformat
-au BufWrite * :Autoformat
-let g:autoformat_autoindent = 0
-let g:autoformat_retab = 0
-let g:autoformat_remove_trailing_spaces = 0
 
 " syntastic
 set statusline+=%#warningmsg#
@@ -190,4 +181,4 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips", $HOME.'/.config/nvim/']
 
 " tsconfig
 let g:syntastic_typescript_tsc_fname = ''
-
+ 

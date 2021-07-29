@@ -32,6 +32,26 @@ sudo npm install --global yarn
 sudo port install go
 ```
 
+
+### PHP
+```zsh
+sudo port install php80
+
+sudo port install php80-intl
+
+sudo port install php80-mbstring
+
+php80 --version
+```
+
+```zsh
+curl -sS https://getcomposer.org/installer | php
+
+sudo mv composer.phar /usr/local/bin/composer
+
+composer --version
+```
+
 ### Oh My Zsh
 
 ```zsh
@@ -159,3 +179,7 @@ sudo port install lazydocker
 sudo port install httpie
 ```
 
+
+```zsh
+sudo port install calc
+```

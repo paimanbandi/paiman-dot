@@ -64,6 +64,10 @@ syntax on
 
 filetype plugin indent on
 
+" map leader to space
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+
 " nerdtree
 au BufWinEnter * NERDTreeFin
 
@@ -112,10 +116,6 @@ nmap <leader>i :CocCommand tsserver.organizeImports<cr>
 
 " prettier
 autocmd FileType javascript typescript set formatprg=prettier\ --stdin
-
-autocmd BufWritePre *.{js,ts,jsx,tsx} :normal gggqG
-
-autocmd BufWritePre *.{js,ts,jsx,tsx} exe "normal! gggqG\<C-o>\<C-o>"
 
 " syntastic
 set statusline+=%#warningmsg#
@@ -218,3 +218,7 @@ let g:floaterm_keymap_toggle = '<F12>'
 let g:floaterm_width = 0.9
 let g:floaterm_height = 0.9
 
+" vim-fugitive
+nmap <leader>j :diffget //3<CR>
+nmap <leader>f :diffget //2<CR>
+nmap <leader>s :G<CR>

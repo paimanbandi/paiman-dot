@@ -34,8 +34,11 @@ sudo port install go
 
 
 ### PHP
+
 ```zsh
 sudo port install php80
+
+sudo port install php80-openssl
 
 sudo port install php80-intl
 
@@ -51,6 +54,14 @@ sudo mv composer.phar /usr/local/bin/composer
 
 composer --version
 ```
+
+
+### Rust
+
+```zsh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
 
 ### Oh My Zsh
 

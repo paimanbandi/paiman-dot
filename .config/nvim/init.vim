@@ -23,6 +23,7 @@ Plug 'ekalinin/Dockerfile.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
 Plug 'vim-syntastic/syntastic'
+Plug 'w0rp/ale'
 
 Plug 'godlygeek/tabular'
 Plug 'npxbr/glow.nvim', {'do': ':GlowInstall', 'branch': 'main'}
@@ -31,6 +32,12 @@ Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
 Plug 'SirVer/ultisnips'
 Plug 'mlaursen/vim-react-snippets'
+
+Plug 'tpope/vim-fugitive'
+Plug 'tveskag/nvim-blame-line'
+Plug 'mhinz/vim-signify'
+
+Plug 'voldikss/vim-floaterm'
 
 call plug#end()
 
@@ -58,7 +65,7 @@ syntax on
 filetype plugin indent on
 
 " nerdtree
-au BufWinEnter * NERDTreeFind
+au BufWinEnter * NERDTreeFin
 
 let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeDirArrows = 1
@@ -73,9 +80,11 @@ nmap <leader>t :NERDTreeToggle<CR>
 nmap <leader>r :NERDTreeFocus<cr>R<c-w><c-p>
 
 " fzf & rg
-silent! nmap <C-f> :Files<CR>
-silent! nmap <C-g> :GFiles<CR>
-silent! nmap <C-r> :Rg!
+let g:fzf_preview_window = 'right:60%'
+let g:fzf_layout = { 'window': { 'width': 1, 'height': 1  }  }
+nmap <C-f> :Files<CR>
+nmap <C-g> :GFiles<CR>
+nmap <C-r> :Rg<CR>
 
 " js family
 au BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
@@ -95,8 +104,18 @@ let g:coc_global_extensions = [
   \ 'coc-json',
 	\ 'coc-prettier',
 	\ 'coc-eslint',
-	\ 'coc-tslint-plugin'
+  \ 'coc-phpls'
   \ ]
+
+""" auto-format imports (remove unused and order)
+nmap <leader>i :CocCommand tsserver.organizeImports<cr>
+
+" prettier
+autocmd FileType javascript typescript set formatprg=prettier\ --stdin
+
+autocmd BufWritePre *.{js,ts,jsx,tsx} :normal gggqG
+
+autocmd BufWritePre *.{js,ts,jsx,tsx} exe "normal! gggqG\<C-o>\<C-o>"
 
 " syntastic
 set statusline+=%#warningmsg#
@@ -181,4 +200,21 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips", $HOME.'/.config/nvim/']
 
 " tsconfig
 let g:syntastic_typescript_tsc_fname = ''
- 
+
+" nvim-blame-line
+nnoremap <silent> <leader>b :ToggleBlameLine<CR>
+
+" laravel
+nmap lr :tabedit routes/api.php
+nmap lmc :!php artisan make:controller
+nmap lmm :!php artisan make:model
+
+" floaterm
+let g:floaterm_keymap_new    = '<F7>'
+let g:floaterm_keymap_prev   = '<F8>'
+let g:floaterm_keymap_next   = '<F9>'
+let g:floaterm_keymap_toggle = '<F12>'
+
+let g:floaterm_width = 0.9
+let g:floaterm_height = 0.9
+

@@ -1,0 +1,32 @@
+[user]
+	name = paimanbandi
+	email = paiman.bandi@gmail.com
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[core]
+	editor = /usr/local/bin/nvim
+[merge]
+  tool = vimdiff
+[mergetool]
+  keepBackup = false  
+[mergetool "vimdiff"]
+  cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+[pager]
+  diff = delta
+  log = delta
+  reflog = delta
+  show = delta
+[delta]
+  plus-style = "syntax #012800"
+  minus-style = "syntax #340001"
+  syntax-theme = Monokai Extended
+  navigate = true
+  line-numbers = true
+  side-by-side = true
+  features = unobtrusive-line-numbers decorations
+  whitespace-error-style = 22 reverse
+[interactive]
+  diffFilter = delta --color-only

@@ -194,3 +194,7 @@ sudo port install httpie
 ```zsh
 sudo port install calc
 ```
+
+```zsh
+sudo port install git-delta
+```

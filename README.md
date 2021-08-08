@@ -23,8 +23,16 @@ sudo port install npm7
 
 
 ```zsh
-sudo npm install --global yarn
+npm install --global yarn
 ```
+
+
+### TypeScript
+
+```zsh
+npm install -g typescript
+```
+
 
 ### Golang
 

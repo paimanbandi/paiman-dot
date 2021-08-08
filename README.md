@@ -3,14 +3,15 @@ My set of zsh, alacritty, tmux, and neovim configuration files.
 
 
 ## ⚡️ Installation
-
-### Fira Code Nerd Font
+<details>
+  <summary>### Fira Code Nerd Font</summary>
 
 ```zsh
 cd ~/Library/Fonts && { wget https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/FiraCode/Regular/complete/Fira%20Code%20Regular%20Nerd%20Font%20Complete%20Mono%20Windows%20Compatible.ttf ; cd -; }
 ```
 
-### NodeJS
+<details>
+  <summary>### NodeJS</summary>
 
 ```zsh
 sudo port install nodejs14
@@ -26,22 +27,22 @@ sudo port install npm7
 npm install --global yarn
 ```
 
-
-### TypeScript
+<details>
+  <summary>### TypeScript</summary>
 
 ```zsh
 npm install -g typescript
 ```
 
-
-### Golang
+<details>
+  <summary>### Golang</summary>
 
 ```zsh
 sudo port install go
 ```
 
-
-### PHP
+<details>
+  <summary>### PHP</summary>
 
 ```zsh
 sudo port install php80
@@ -63,11 +64,27 @@ sudo mv composer.phar /usr/local/bin/composer
 composer --version
 ```
 
-
-### Rust
+<details>
+  <summary>### Rust</summary>
 
 ```zsh
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
+<details>
+  <summary>### Haskell</summary>
+
+```zsh
+sudo port install stack
+```
+
+```zsh
+stack install ghc-mod hlint hdevtools hfmt
+```
+
+```zsh
+brew install haskell-language-server
+
 ```
 
 

@@ -12,6 +12,7 @@ Plug 'ryanoasis/vim-devicons'
 
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'stsewd/fzf-checkout.vim'
 
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'
@@ -19,6 +20,11 @@ Plug 'pangloss/vim-javascript'
 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'ekalinin/Dockerfile.vim'
+
+" haskell
+Plug 'eagletmt/ghcmod-vim'
+Plug 'Shougo/vimproc'
+Plug 'neovimhaskell/haskell-vim'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
@@ -49,6 +55,7 @@ set t_Co=256
 
 set hidden
 set nu
+set rnu
 set ruler
 set mouse=a
 set nobackup
@@ -58,6 +65,8 @@ set tabstop=2 softtabstop=2 shiftwidth=2
 set expandtab
 set foldmethod=syntax
 set autowrite
+set history=1000
+set cursorline
 
 syntax sync fromstart
 syntax on
@@ -85,7 +94,9 @@ nmap <leader>r :NERDTreeFocus<cr>R<c-w><c-p>
 
 " fzf & rg
 let g:fzf_preview_window = 'right:60%'
-let g:fzf_layout = { 'window': { 'width': 1, 'height': 1  }  }
+let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8  }  }
+let $FZF_DEFAULT_OPTS='--reverse'
+
 nmap <C-f> :Files<CR>
 nmap <C-g> :GFiles<CR>
 nmap <C-r> :Rg<CR>
@@ -113,9 +124,6 @@ let g:coc_global_extensions = [
 
 """ auto-format imports (remove unused and order)
 nmap <leader>i :CocCommand tsserver.organizeImports<cr>
-
-" prettier
-autocmd FileType javascript typescript set formatprg=prettier\ --stdin
 
 " syntastic
 set statusline+=%#warningmsg#
@@ -215,10 +223,45 @@ let g:floaterm_keymap_prev   = '<F8>'
 let g:floaterm_keymap_next   = '<F9>'
 let g:floaterm_keymap_toggle = '<F12>'
 
-let g:floaterm_width = 0.9
-let g:floaterm_height = 0.9
+let g:floaterm_width = 0.8
+let g:floaterm_height = 0.8
 
 " vim-fugitive
-nmap <leader>j :diffget //3<CR>
-nmap <leader>f :diffget //2<CR>
+nmap <leader>h :diffget //3<CR>
+nmap <leader>u :diffget //2<CR>
 nmap <leader>s :G<CR>
+nmap <leader>co :GCheckout<CR>
+nmap <leader>ct :Git commit<CR>
+nmap <leader>ac :G add .<CR>
+nmap <leader>lg :G log<CR>
+nmap <leader>ri2 :G rebase -i HEAD~2<CR>
+nmap <leader>ri3 :G rebase -i HEAD~3<CR>
+nmap <leader>ri4 :G rebase -i HEAD~4<CR>
+nmap <leader>ri5 :G rebase -i HEAD~5<CR>
+nmap <leader>p :Gpush<CR>
+
+" haskell
+nmap <silent>hti :GhcModTypeInsert<CR>
+nmap <silent>hs :GhcModSplitFunCase<CR>
+nmap <leader>ht :GhcModType<cr>
+nmap <leader>htc :GhcModTypeClear<cr>
+au FileType haskell nmap <buffer> <leader>? :call ale#cursor#ShowCursorDetail()<cr>
+
+let g:ale_linters ={
+      \   'haskell': ['hlint', 'hdevtools', 'hfmt'],
+      \}
+
+" ghc-mod
+map <silent> tq :GhcModType<CR>
+map <silent> te :GhcModTypeClear<CR>
+
+" haskell-vim
+
+let g:haskell_enable_quantification = 1  
+let g:haskell_enable_recursivedo = 1   
+let g:haskell_enable_arrowsyntax = 1     
+let g:haskell_enable_pattern_synonyms = 1 
+let g:haskell_enable_typeroles = 1    
+let g:haskell_enable_static_pointers = 1  
+let g:haskell_backpack = 1          
+

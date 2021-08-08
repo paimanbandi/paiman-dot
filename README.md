@@ -3,6 +3,7 @@ My set of zsh, alacritty, tmux, and neovim configuration files.
 
 
 ## ⚡️ Installation
+
 <details>
   <summary>### Fira Code Nerd Font</summary>
 
@@ -10,13 +11,14 @@ My set of zsh, alacritty, tmux, and neovim configuration files.
 cd ~/Library/Fonts && { wget https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/FiraCode/Regular/complete/Fira%20Code%20Regular%20Nerd%20Font%20Complete%20Mono%20Windows%20Compatible.ttf ; cd -; }
 ```
 
+</details>
+
 <details>
   <summary>### NodeJS</summary>
 
 ```zsh
 sudo port install nodejs14
 ```
-
 
 ```zsh
 sudo port install npm7
@@ -27,6 +29,8 @@ sudo port install npm7
 npm install --global yarn
 ```
 
+</details>
+
 <details>
   <summary>### TypeScript</summary>
 
@@ -34,12 +38,16 @@ npm install --global yarn
 npm install -g typescript
 ```
 
+</details>
+
 <details>
   <summary>### Golang</summary>
 
 ```zsh
 sudo port install go
 ```
+
+</details>
 
 <details>
   <summary>### PHP</summary>
@@ -64,12 +72,16 @@ sudo mv composer.phar /usr/local/bin/composer
 composer --version
 ```
 
+</details>
+
 <details>
   <summary>### Rust</summary>
 
 ```zsh
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
+
+</details>
 
 <details>
   <summary>### Haskell</summary>
@@ -87,8 +99,10 @@ brew install haskell-language-server
 
 ```
 
+</details>
 
-### Oh My Zsh
+<details>
+  <summary>### Oh My Zsh</summary>
 
 ```zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -113,22 +127,28 @@ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zs
 cd ~/.oh-my-zsh/themes && { wget https://raw.githubusercontent.com/halfo/lambda-mod-zsh-theme/master/lambda-mod.zsh-theme ; cd -; }
 ```
 
+</details>
 
-### Alacritty
+<details>
+  <summary>### Alacritty</summary>
 
 ```zsh
 sudo port install alacritty
 ```
 
+</details>
 
-### Tmux
+<details>
+  <summary>### Tmux</summary>
 
 ```zsh
 sudo port install tmux
 ```
 
+</details>
 
-### Neovim 
+<details>
+  <summary>### Neovim</summary>
 
 ```zsh
 cd /Applications && { wget https://github.com/neovim/neovim/releases/download/v0.5.0/nvim-macos.tar.gz ; cd -; }
@@ -145,9 +165,10 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ```
 
+</details>
 
-### Pynvim
-
+<details>
+  <summary>### Pynvim</summary>
 
 ```zsh
 python3 -m pip install --user --upgrade pip
@@ -155,7 +176,10 @@ python3 -m pip install --user --upgrade pip
 python3 -m pip install --user --upgrade pynvim
 ```
 
-### MySQL & PostgreSQL Client
+</details>
+
+<details>
+  <summary>### MySQL & PostgreSQL Client</summary>
 
 ```zsh
 brew install mysql-client
@@ -168,8 +192,10 @@ brew install libpq
 brew link --force libpq
 ```
 
+</details>
 
-### Other tools
+<details>
+  <summary>### Other tools</summary>
 
 ```zsh
 sudo port install exa
@@ -223,3 +249,5 @@ sudo port install calc
 ```zsh
 sudo port install git-delta
 ```
+
+</details>

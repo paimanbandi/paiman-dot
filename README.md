@@ -16,12 +16,26 @@ cd ~/Library/Fonts && { wget https://github.com/ryanoasis/nerd-fonts/raw/master/
 <details>
   <summary>### NodeJS</summary>
 
+
 ```zsh
-sudo port install nodejs14
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 ```
 
 ```zsh
-sudo port install npm7
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+```
+
+```zsh
+nvm install node
+```
+
+```zsh
+nvm install v14.17.4
+```
+
+```zsh
+nvm install-latest-npm
 ```
 
 

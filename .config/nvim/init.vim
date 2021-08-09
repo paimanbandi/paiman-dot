@@ -238,7 +238,7 @@ nmap <leader>ri2 :G rebase -i HEAD~2<CR>
 nmap <leader>ri3 :G rebase -i HEAD~3<CR>
 nmap <leader>ri4 :G rebase -i HEAD~4<CR>
 nmap <leader>ri5 :G rebase -i HEAD~5<CR>
-nmap <leader>p :Gpush<CR>
+nmap <leader>p :G push<CR>
 
 " haskell
 nmap <silent>hti :GhcModTypeInsert<CR>

@@ -1,11 +1,11 @@
 # paiman-dot
-My set of zsh, alacritty, tmux, and neovim configuration files.
+My set of zsh, alacritty, tmux, neovim and git configuration files.
 
 
 ## ⚡️ Installation
 
 <details>
-  <summary>### Fira Code Nerd Font</summary>
+  <summary>Fira Code Nerd Font</summary>
 
 ```zsh
 cd ~/Library/Fonts && { wget https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/FiraCode/Regular/complete/Fira%20Code%20Regular%20Nerd%20Font%20Complete%20Mono%20Windows%20Compatible.ttf ; cd -; }
@@ -14,7 +14,7 @@ cd ~/Library/Fonts && { wget https://github.com/ryanoasis/nerd-fonts/raw/master/
 </details>
 
 <details>
-  <summary>### NodeJS</summary>
+  <summary>NodeJS</summary>
 
 
 ```zsh
@@ -46,7 +46,7 @@ npm install --global yarn
 </details>
 
 <details>
-  <summary>### TypeScript</summary>
+  <summary>TypeScript</summary>
 
 ```zsh
 npm install -g typescript
@@ -55,7 +55,7 @@ npm install -g typescript
 </details>
 
 <details>
-  <summary>### Golang</summary>
+  <summary>Golang</summary>
 
 ```zsh
 sudo port install go
@@ -64,7 +64,7 @@ sudo port install go
 </details>
 
 <details>
-  <summary>### PHP</summary>
+  <summary>PHP</summary>
 
 ```zsh
 sudo port install php80
@@ -89,7 +89,7 @@ composer --version
 </details>
 
 <details>
-  <summary>### Rust</summary>
+  <summary>Rust</summary>
 
 ```zsh
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -98,7 +98,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 </details>
 
 <details>
-  <summary>### Haskell</summary>
+  <summary>Haskell</summary>
 
 ```zsh
 sudo port install stack
@@ -116,7 +116,7 @@ brew install haskell-language-server
 </details>
 
 <details>
-  <summary>### Oh My Zsh</summary>
+  <summary>Oh My Zsh</summary>
 
 ```zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -144,7 +144,7 @@ cd ~/.oh-my-zsh/themes && { wget https://raw.githubusercontent.com/halfo/lambda-
 </details>
 
 <details>
-  <summary>### Alacritty</summary>
+  <summary>Alacritty</summary>
 
 ```zsh
 sudo port install alacritty
@@ -153,7 +153,7 @@ sudo port install alacritty
 </details>
 
 <details>
-  <summary>### Tmux</summary>
+  <summary>Tmux</summary>
 
 ```zsh
 sudo port install tmux
@@ -162,14 +162,10 @@ sudo port install tmux
 </details>
 
 <details>
-  <summary>### Neovim</summary>
+  <summary>Neovim</summary>
 
 ```zsh
-cd /Applications && { wget https://github.com/neovim/neovim/releases/download/v0.5.0/nvim-macos.tar.gz ; cd -; }
-
-tar xzvf /Applications/nvim-macos.tar.gz
-
-ln -s /Applications/nvim-osx64/bin/nvim /usr/local/bin/nvim
+cd /Applications && { wget https://github.com/neovim/neovim/releases/download/v0.5.0/nvim-macos.tar.gz ; cd -; } && tar xzvf /Applications/nvim-macos.tar.gz && ln -s /Applications/nvim-osx64/bin/nvim /usr/local/bin/nvim
 
 ```
 
@@ -182,7 +178,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 </details>
 
 <details>
-  <summary>### Pynvim</summary>
+  <summary>Pynvim</summary>
 
 ```zsh
 python3 -m pip install --user --upgrade pip
@@ -193,7 +189,7 @@ python3 -m pip install --user --upgrade pynvim
 </details>
 
 <details>
-  <summary>### MySQL & PostgreSQL Client</summary>
+  <summary>MySQL & PostgreSQL Client</summary>
 
 ```zsh
 brew install mysql-client
@@ -209,7 +205,7 @@ brew link --force libpq
 </details>
 
 <details>
-  <summary>### Other tools</summary>
+  <summary>Other tools</summary>
 
 ```zsh
 sudo port install exa

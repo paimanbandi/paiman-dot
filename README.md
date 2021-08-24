@@ -1,6 +1,6 @@
 # paiman-dot
-My set of zsh, alacritty, tmux, neovim and git configuration files.
 
+My set of zsh, alacritty, tmux, neovim and git configuration files.
 
 ## ⚡️ Installation
 
@@ -15,7 +15,6 @@ cd ~/Library/Fonts && { wget https://github.com/ryanoasis/nerd-fonts/raw/master/
 
 <details>
   <summary>NodeJS</summary>
-
 
 ```zsh
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
@@ -37,7 +36,6 @@ nvm install v14.17.4
 ```zsh
 nvm install-latest-npm
 ```
-
 
 ```zsh
 npm install --global yarn
@@ -99,10 +97,20 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 <details>
   <summary>Haskell</summary>
+```zsh
+cd /Applications && { wget https://downloads.haskell.org/~ghc/9.0.1/ghc-9.0.1-x86_64-apple-darwin.tar.xz; cd -; } && tar xzvf /Applications/ghc-9.0.1-x86_64-apple-darwin.tar.xz
+
+cd ghc-9.0.1
+
+./configure
+
+make install
+
+````
 
 ```zsh
 sudo port install stack
-```
+````
 
 ```zsh
 stack install ghc-mod hlint hdevtools hfmt
@@ -111,6 +119,15 @@ stack install ghc-mod hlint hdevtools hfmt
 ```zsh
 brew install haskell-language-server
 
+```
+
+</details>
+
+<details>
+  <summary>Elixir</summary>
+
+```zsh
+brew install elixir
 ```
 
 </details>
@@ -126,16 +143,13 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
 
-
 ```zsh
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
-
 ```zsh
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
 ```
-
 
 ```zsh
 cd ~/.oh-my-zsh/themes && { wget https://raw.githubusercontent.com/halfo/lambda-mod-zsh-theme/master/lambda-mod.zsh-theme ; cd -; }
@@ -169,7 +183,6 @@ cd /Applications && { wget https://github.com/neovim/neovim/releases/download/v0
 
 ```
 
-
 ```zsh
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
@@ -195,9 +208,8 @@ python3 -m pip install --user --upgrade pynvim
 brew install mysql-client
 ```
 
-
 ```zsh
-brew install libpq  
+brew install libpq
 
 brew link --force libpq
 ```
@@ -211,46 +223,37 @@ brew link --force libpq
 sudo port install exa
 ```
 
-
 ```zsh
 sudo port install yank
 ```
-
 
 ```zsh
 sudo port install fzf
 ```
 
-
 ```zsh
 sudo port install fd
 ```
-
 
 ```zsh
 sudo port install ripgrep
 ```
 
-
 ```zsh
 sudo port install glow
 ```
-
 
 ```zsh
 sudo port install wtfutil
 ```
 
-
 ```zsh
 sudo port install lazydocker
 ```
 
-
 ```zsh
 sudo port install httpie
 ```
-
 
 ```zsh
 sudo port install calc
@@ -258,6 +261,26 @@ sudo port install calc
 
 ```zsh
 sudo port install git-delta
+```
+
+```zsh
+sudo port install lazygit
+```
+
+```zsh
+sudo port install htop
+```
+
+```zsh
+sudo port install gotop
+```
+
+```zsh
+sudo port install asciidoc
+```
+
+```zsh
+brew install lnav
 ```
 
 </details>

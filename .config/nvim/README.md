@@ -1,0 +1,22 @@
+## Plugins
+
+- packer
+- nvim-tree
+- toggleterm
+- indent-blankline
+- nvim-treesitter
+- format
+- autosave
+- dart-vim-plugin
+- nvim-lspconfig
+- lspsaga
+- nvim-cmp
+- rainbow
+- lualine
+- statusline
+- lazygit
+- syntastic
+- nvim-autopairs
+- nvim-colorizer
+- telescope
+- flutter-tools

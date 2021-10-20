@@ -97,20 +97,26 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 <details>
   <summary>Haskell</summary>
+
 ```zsh
 cd /Applications && { wget https://downloads.haskell.org/~ghc/9.0.1/ghc-9.0.1-x86_64-apple-darwin.tar.xz; cd -; } && tar xzvf /Applications/ghc-9.0.1-x86_64-apple-darwin.tar.xz
+```
 
+```zsh
 cd ghc-9.0.1
+```
 
+```zsh
 ./configure
+```
 
+```zsh
 make install
-
-````
+```
 
 ```zsh
 sudo port install stack
-````
+```
 
 ```zsh
 stack install ghc-mod hlint hdevtools hfmt
@@ -152,7 +158,7 @@ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zs
 ```
 
 ```zsh
-cd ~/.oh-my-zsh/themes && { wget https://raw.githubusercontent.com/halfo/lambda-mod-zsh-theme/master/lambda-mod.zsh-theme ; cd -; }
+cd ~/.oh-my-zsh/themes && { wget https://raw.githubusercontent.com/paimanbandi/lambda-p-zsh-theme/master/lambda-p.zsh-theme ; cd -; }
 ```
 
 </details>
